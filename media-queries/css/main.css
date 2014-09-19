@@ -1,0 +1,33 @@
+@-moz-viewport { width: device-width; scale: 1;}
+@-ms-viewport { width: device-width; scale: 1;}
+@-o-viewport { width: device-width; scale: 1;}
+@-webkit-viewport { width: device-width; scale: 1;}
+@viewport { width: device-width; scale: 1;}
+
+/* The information to talk to each browser */ 
+
+html {
+    box-sizing: border-box;
+} /* tells the width to be after the padding and the width, this adds them together */
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+.title {
+    color: red;
+}
+
+@media only screen and (min-width: 25em ) /*this tells is the browser when to change the code;;;;;; don't use pixels! you want to see if it looks good on all sizes. base this numebr on the tpyograpghy, so that the content can be viewed porperly. take the number and divide by 16. (this is the minimum browser font size, but this also allows it to be taken from what the user's defult font size is- one em is 16px) if the font size is bigger then our default will give them a different layout. */ {
+    .title {
+        color: blue;
+        font-size: 10rem;
+    }
+}
+
+@media only screen and (min-width: 700px ) /* start small and work up, this will inherit everything that has a min width below this. it will compound the code, so you don't rechange and readd everything */ {
+
+    .title {
+        color: green;
+    }
+  }      
+    
